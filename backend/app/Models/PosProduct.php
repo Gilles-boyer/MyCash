@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class PosProduct extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'product_id',
+        'po_id',
+    ];
 }

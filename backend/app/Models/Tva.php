@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Tva extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'rate',
+    ];
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }
